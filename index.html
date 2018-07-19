@@ -21,6 +21,9 @@
 	<script>
 		var i = 1;
 		function changeImg(){
+			if(i>=4){
+				return;
+			}
 			i+=1;
 			$("img").attr("src","images/"+i+".jpg");
 			$("p").css("display","none");
