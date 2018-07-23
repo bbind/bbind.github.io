@@ -12,24 +12,29 @@
 </style>
 <body>
 	<div style="text-align: center;">
-		<img id="img" alt="개발자를 보는시선" src="images/1.jpg" onclick="changeImg();">
+		<img id="img" alt="개발자를 보는시선" src="images/0.jpg" onclick="changeImg();">
+		
+		<div>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<p id="0"></p>
 		<p style="display:none;" id="1">개발자를 보는 여러 시선</p>
-		<p style="display:none;" id="2">프로그래머가 꿈인 초등학생이 지식인에 올린 글</p>
-		<p style="display:none;" id="3">목적지는 하나지만 길은 여럿!</p>
-		<p style="display:none;" id="4">프로그래머 아내가 알아야 할 것들!</p>		
+		<p style="display:none;" id="2">프로그래머가 꿈인 초등학생이 지식인에 올린 글</p>	
 	</div>
 	<script>
 		var i = 0;
 		function changeImg(){
-			if(i>=4){
+			if(i>=2){
 				return;
 			}
-			
-			$("img").attr("src","images/"+i+".jpg");
 			$("#"+i).css("display","none");
 			i++;
 			$("#"+i).css("display","");
-			
+			$("img").attr("src","images/"+i+".jpg");
 		}
 	</script>
 </body>
